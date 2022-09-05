@@ -1,0 +1,37 @@
+<div class="panel-body ">
+    <div class="row">
+        <div class="text">
+            <h1>Proyectos Realizados </h1>
+           <div> <div *ngIf="userLogged |async as user">
+
+            <a class="button" routerLink="/newProy">Agregar proyecto</a>
+           </div>
+        </div>
+
+        <div>
+            <ul>
+                <br>
+                <ng-container *ngFor="let Proyecto of proyectos">
+                    <li>
+                        <h2>{{Proyecto.nombre}}</h2>
+                        <br>
+                        <h3>{{Proyecto.descripcion}}</h3><div class="col-sm-12 col-md-3 col-lg-3 offset-md-1 offset-lg-1 parte2">
+                            <br>
+                            <img class="image" [src]="Proyecto.img"
+                                    class="img-fluid img" />
+                    </div>
+                     
+                    <div class="">
+                        <div class="">
+                            <br>
+                            <div *ngIf="userLogged |async as user">
+                            <a class="btn bi-pencil-square" id="btn-edit-proy" routerLink="/editar-proyecto/{{Proyecto.id}}">
+                              <i class="fa fa-pencil"></i>
+                            </a>
+                            
+                          <button (click)="eliminar_proyecto(Proyecto.id)" class="btn btn-secondary">
+                            X
+                        </button>
+                        <br>
+                        <br>
+   

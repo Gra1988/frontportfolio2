@@ -7,7 +7,7 @@ import { Portada } from '../model/portada.model';
   providedIn: 'root'
 })
 export class PortadaService {
-  URL = 'https://app-backgsc.herokuapp.com/portadas/'
+  URL = 'https://backend-production-0846.up.railway.app/'
 
   constructor(private http: HttpClient) { }
 

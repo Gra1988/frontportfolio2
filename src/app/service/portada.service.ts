@@ -7,7 +7,7 @@ import { Portada } from '../model/portada.model';
   providedIn: 'root'
 })
 export class PortadaService {
-  URL = 'https://backend-production-0846.up.railway.app/'
+  URL = 'https://backend-production-0846.up.railway.app/portadas/'
 
   constructor(private http: HttpClient) { }
 
